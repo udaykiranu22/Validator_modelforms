@@ -1,0 +1,32 @@
+{% load usdf %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>data : {{data}}</h1>
+        <h1>{{data|swapping}}</h1>
+        <h1>{{data|capitalize}}</h1>
+        <h1>{{data|counters:'a'}}</h1>
+
+        <p>==========================================================</p>
+<h1>builtin filters</h1>
+        <h1>upper : {{data| upper}}</h1>
+        <h1>lower : {{data| lower}}</h1>
+        <h1>capfirst : {{data| capfirst}}</h1>
+        <h1>length : {{data| length}}</h1>
+        <h1>date : {{dt| date}}</h1>
+        <h1>month : {{dt| date:'M'}}</h1>
+        <h1>truncatewords : {{data| truncatewords:'2'}}</h1>
+        <h1>truncatechars : {{data| truncatechars:'5'}}</h1>
+        <h1>slice : {{data| slice:'5'}}</h1>
+        {% for i in kiss %}
+        <h1>pluralize : you have {{i}}kiss{{i| pluralize:'es'}} left</h1>
+        {% endfor %}
+    </center>
+</body>
+</html>

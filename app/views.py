@@ -14,3 +14,13 @@ def studentv(request):
         else:
             return HttpResponse('Error Form Invalid')
     return render(request, 'student.html', d)
+
+# we need to create templatetags package ===================================================
+
+def strings(request):
+    data = 'udaY Kiran how are YOU'
+    import datetime
+    dt = datetime.datetime.now()
+    kiss = [0,1,2]
+    d = {'data' : data,'dt':dt, 'kiss':kiss}
+    return render(request, 'demo.html', d)
